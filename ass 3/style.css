@@ -1,0 +1,46 @@
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+#header {
+  background-color: dimgray;
+  height: 6rem;
+  border-bottom: 0.5rem solid LightSalmon;
+}
+
+#header h1 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+#title {
+  height: 27.5rem;
+  background-color: lightgray;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+}
+
+#about {
+  display: flex;
+}
+
+#about img {
+  height: 21.5rem;
+}
+
+h3 {
+  color: LightSalmon;
+  width: 10rem;
+  margin: 0 auto; 
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+#fav {
+  display: flex;
+  justify-content: space-evenly;
+}
