@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  
+    background-image: url(https://cdn.imgchest.com/files/wye3cdnxp4b.png);
+    background-repeat: no-repeat;
+    max-width: 1143px;
+    min-height: 1583px;
+    font-size: 2rem;
+    opacity: .5;
+    color: blue;
+}
+
+
+.container {
+    display: grid;
+    grid-template-rows: 49px 479px 102px 667px 138px;
+    grid-template-columns: 100px 752px 427px;
+    grid-template-areas:
+        "one six six"
+        "two two two"
+        "three three three"
+        "four four seven"
+        "five five five";
+}
+
+
+.container > * {
+    border: 2.3px dashed blue;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    font-weight: bold;
+}
+.box6 {
+    grid-area: six;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 0;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+.menu li {
+    background-color: rgba(255, 0, 0, 0.8); 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Raiting {
+    width: 80px; 
+}
+
+.Join {
+    width: 40px; 
+}
+
+.Profile {
+    width: 30px; 
+}
+
+.Search {
+    width: 30px; 
+}
+
+.Menu {
+    width: 80px; 
+}
+
+.menu li:hover {
+    background-color: darkred;
+}
+
+
+@media (max-width: 1200px) {
+     .container {
+        grid-template-columns: 100px 752px 427px;
+      
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+.box1 {
+    grid-area: one;
+}
+
+.box2 {
+    grid-area: two;
+}
+
+.box3 {
+    grid-area: three;
+}
+
+.box4 {
+    grid-area: four;
+}
+
+.box5 {
+    grid-area: five;
+}
+.box7 {
+    grid-area: seven;
+}
