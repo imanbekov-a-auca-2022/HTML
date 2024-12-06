@@ -6,7 +6,7 @@
 
 body {
   
-    background-image: url(https://cdn.imgchest.com/files/wye3cdnxp4b.png);
+    
     background-repeat: no-repeat;
     max-width: 1143px;
     min-height: 1583px;
@@ -49,22 +49,23 @@ body {
     list-style-type: none;
     display: flex;
     gap: 0;
-    font-family: Arial, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    flex-wrap: wrap; 
 }
 
 .menu li {
-    background-color: rgba(255, 0, 0, 0.8); 
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+     
+    background: none; 
+    border: none; 
+    padding: 0; 
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    
 }
+
 
 .Raiting {
     width: 80px; 
