@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9</title>
+    <link rel="stylesheet" href="grid4.css" class="style">
+</head>
+<body>
+    <!-- Style Switcher Button -->
+    <button onclick='switchStyle()' style='position: absolute; top:0; right:0; background-color: #ff6600; color: white; border: none; padding: 10px; cursor: pointer;'>Style</button> 
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Logo Box -->
+        <div class="box logo">
+            <img src="https://github.com/imanbekov-a-auca-2022/HTML/blob/main/%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_2024-12-06_172918136.png?raw=true" alt="Logo">
+        </div>
+
+        <!-- Menu Box -->
+        <div class="box menu">
+            <ul class="menu-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Hero Box -->
+        <div class="box hero">
+            <h1>Welcome to Our Website</h1>
+        </div>
+
+        <!-- Flexbox Layout 1 -->
+        <div class="box flex1">
+            <div class="flex-column">
+                <h2>Section 1</h2>
+                <img src="https://github.com/imanbekov-a-auca-2022/HTML/blob/main/Download%20Telegram%20stickers%20for%20free_%20The%20most%20popular%20sticker%20collections%20for%20Telegram.jpg?raw=true" alt="Section 1 Image">
+                <p>This is the first section.</p>
+            </div>
+            <div class="flex-column">
+                <h2>Section 2</h2>
+                <img src="https://github.com/imanbekov-a-auca-2022/HTML/blob/main/Mafumafu.jpg?raw=true" alt="Section 2 Image">
+                <p>This is the second section.</p>
+            </div>
+        </div>
+
+        <!-- Flexbox Layout 2 -->
+        <div class="box flex2">
+            <div class="flex-column">
+                <h2>Section 3</h2>
+                <img src="https://github.com/imanbekov-a-auca-2022/HTML/blob/main/%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B6%D0%B5%D0%BD%D0%BE.gif?raw=true" alt="Section 3 Image">
+                <p>This is the third section.</p>
+            </div>
+            <div class="flex-column">
+                <h2>Section 4</h2>
+                <img src="https://github.com/imanbekov-a-auca-2022/HTML/blob/main/Mafumafu%20Cute%20Sticker%20-%20Mafumafu%20Cute%20Animated%20-%20Discover%20&%20Share%20GIFs.gif?raw=true" alt="Section 4 Image">
+                <p>This is the fourth section.</p>
+            </div>
+        </div>
+
+        <!-- Left Sidebar -->
+        <div class="box sidebar">
+            <p>Advertisement or content</p>
+        </div>
+    </div>
+
+    <!-- Script for Style Switcher -->
+    <script>
+        function switchStyle() {
+            let style = document.querySelector('.style');
+            if (style.getAttribute('href') == 'grid4.css') {
+                style.setAttribute('href', 'grid2.css');
+            } else {
+                style.setAttribute('href', 'grid4.css');
+            }
+        }
+    </script>
+</body>
+</html>
