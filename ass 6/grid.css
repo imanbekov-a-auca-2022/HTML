@@ -31,8 +31,8 @@ body {
 .container > * {
     border: 2px dashed blue;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     font-weight: bold;
 }
 
