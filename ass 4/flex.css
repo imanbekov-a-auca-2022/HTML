@@ -1,0 +1,75 @@
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("https://cdn.imgchest.com/files/g4z9cwd2872.png") no-repeat top left;
+  background-size: 1400px auto; 
+  opacity: 0.5;
+  overflow-x: hidden; 
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap; 
+  width: 1400px; 
+  gap: 10px;
+  justify-content: start;
+}
+
+.container > * {
+  background-color: lightblue;
+  border: 2px dashed blue;
+  color: blue;
+  font-size: 9rem;
+  text-align: left;
+  line-height: 1.04;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 10px;
+  flex-shrink: 0; 
+  margin-left: -5.4px;
+}
+
+
+.box1 {
+  flex: 0 0 15.55%; 
+  height: 182px;
+  margin-bottom: 2px;
+  margin-right: 9px;
+}
+
+.box2 {
+  flex: 0 0 75%; 
+  height: 182px;
+}
+
+.box3 {
+  flex: 0 0 91.5%; 
+  height: 183px;
+  margin-bottom: 3px;
+}
+
+.box4 {
+  flex: 0 0 38.6%; 
+  height: 182px;
+  margin-right: 9px;
+}
+
+.box5 {
+  flex: 0 0 38.2%; 
+  height: 182px;
+  margin-right: 9px;
+}
+
+.box6 {
+  flex: 0 0 12.8%; 
+  height: 182px;
+}
+
+
+
