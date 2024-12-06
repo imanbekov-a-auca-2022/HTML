@@ -11,6 +11,8 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
@@ -44,9 +46,17 @@ body {
     transform: scale(1.05);
 }
 
+.flex1 img, .flex2 img, .sidebar img {
+    max-width: 100%; 
+    max-height: 400px; 
+    width: auto; 
+    height: auto; 
+    object-fit: contain; 
+}
+
 
 .logo img {
-    width: 100px;
+    width: 150px;
     height: auto;
 }
 
@@ -58,22 +68,64 @@ body {
 .menu-list {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    flex-direction: row; 
+    gap: 15px;
 }
 
 .menu-list li {
-    margin: 15px 0;
-    text-transform: uppercase;
+    text-align: left; 
 }
 
 .menu-list li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid transparent; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    display: inline-block; 
 }
 
-.menu-list li:hover {
-    color: #ff6600;
+.menu-list li a:hover {
+    background-color: #ff6600; 
+    color: white; 
+    border: 2px solid #ff6600; 
+    transform: scale(1.05);
+}
+
+.menu-list li a:active {
+    transform: scale(0.95); 
+}
+
+body.dark-theme {
+    background-color: #121212; 
+    color: #e0e0e0; 
+}
+
+body.dark-theme .box {
+    background-color: #1e1e1e;
+    color: #e0e0e0; 
+    border-color: #333; 
+}
+
+body.dark-theme .flex1,
+body.dark-theme .flex2 {
+    color: black !important; 
+    background-color: #1e1e1e;
+}
+
+body.dark-theme .box:hover {
+    background-color: #800080; 
+}
+
+body.dark-theme .menu-list li a {
+    color: #e0e0e0; 
+}
+
+body.dark-theme .menu-list li a:hover {
+    background-color: #800080;
+    color: white;
 }
 
 
@@ -86,7 +138,8 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    height: 300px;
+    height: 200px;
+    width: auto;
 }
 
 .hero h1 {
