@@ -1,0 +1,235 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #ddd;
+    --link-color: #0066cc;
+}
+
+.dark-theme {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --border-color: #444;
+    --link-color: #66b3ff;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 47px 479px 104px 663px 133px;
+    grid-template-columns: 100px 752px 427px;
+    grid-template-areas:
+        "one six six"
+        "two two two"
+        "three three three"
+        "four four seven"
+        "five five five";
+    gap: 1px;
+    background-color: var(--border-color);
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.container > div {
+    background-color: var(--bg-color);
+    padding: 10px;
+    overflow: hidden;
+}
+
+/* Box 1 - Logo */
+.box1 {
+    grid-area: one;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 0.9;
+}
+
+/* Box 2 - Search */
+.box2 {
+    grid-area: two;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://github.com/imanbekov-a-auca-2022/HTML/blob/main/8b91ba0ef3f5f9cfd80176dba9d0762c7a0f748dc0b95935ce0548dd0bac6920.jpg?raw=true');
+    background-size: cover;
+    background-position: center;
+}
+
+.search-box {
+    width: 80%;
+    max-width: 800px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+/* Box 3 - Section links */
+.box3 {
+    grid-area: three;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.section-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.section-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.divider {
+    color: var(--border-color);
+}
+
+/* Box 4 - Profiles */
+.box4 {
+    grid-area: four;
+}
+
+.profiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.profile-card {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    background: #ddd;
+    flex-shrink: 0;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+/* Box 5 - Footer */
+.box5 {
+    grid-area: five;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Box 6 - Utility navigation */
+.box6 {
+    grid-area: six;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.utility-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.utility-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.menu-btn {
+    padding: 5px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+/* Box 7 - Sidebar */
+.box7 {
+    grid-area: seven;
+}
+
+.sidebar {
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+}
+
+.region-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.region-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Controls */
+.controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.controls button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: var(--link-color);
+    color: white;
+    cursor: pointer;
+}
+
+/* Horizontal layout */
+.container.horizontal {
+    grid-template-rows: 100px auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "one six six seven"
+        "two two three three"
+        "four four five five";
+    height: 100vh;
+}
