@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+    <link rel="stylesheet" href="grid.css">   
+</head>
+<body>
+    <div class="controls">
+        <button onclick="toggleTheme()">theme</button>
+        <button onclick="toggleOrientation()">style</button>
+    </div>
+    
+    <div class="container">
+        <!-- Box 1 - Logo -->
+        <div class="box1">
+            <div class="logo">КТО ЕСТЬ КТО</div>
+        </div>
+
+        <!-- Box 2 - Hero with search -->
+        <div class="box2">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+
+        <!-- Box 3 - Organization/People links -->
+        <div class="box3">
+            <div class="section-links">
+                <a href="#">ORGANIZATION</a>
+                <span class="divider">|</span>
+                <a href="#">PEOPLE</a>
+            </div>
+            <div class="stats">24857 people</div>
+        </div>
+
+        <!-- Box 4 - Profiles section -->
+        <div class="box4">
+            <div class="profiles-container"></div>
+        </div>
+
+        <!-- Box 5 - Footer -->
+        <div class="box5">
+            <footer>
+                <p>© News agency AKIpress, "Who is Who", 2003-2023</p>
+            </footer>
+        </div>
+
+        <!-- Box 6 - Top right navigation -->
+        <div class="box6">
+            <div class="utility-nav">
+                <a href="#">Rating</a>
+                <a href="#">Join</a>
+                <a href="#" class="menu-btn">MENU</a>
+            </div>
+        </div>
+
+        <!-- Box 7 - Sidebar -->
+        <div class="box7">
+            <div class="sidebar">
+                <h2>KYRGYZSTAN</h2>
+                <nav class="region-nav">
+                    <a href="#">The president</a>
+                    <a href="#">Zhogorku Kenesh</a>
+                    <a href="#">Cabinet of Ministers</a>
+                    <a href="#">Ministries and departments</a>
+                    <a href="#">Judicial system</a>
+                    <a href="#">Healthcare</a>
+                    <a href="#">Strong structure</a>
+                    <a href="#">Bishkek</a>
+                    <a href="#">Osh</a>
+                    <a href="#">Batken region</a>
+                    <a href="#">Jalal-Abad region</a>
+                    <a href="#">Issyk-Kul region</a>
+                    <a href="#">Naryn region</a>
+                    <a href="#">Osh region</a>
+                    <a href="#">Talas region</a>
+                    <a href="#">Chui area</a>
+                    <a href="#">Science and education</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+
+        function toggleOrientation() {
+            document.querySelector('.container').classList.toggle('horizontal');
+        }
+
+        // Профили
+        const profiles = [
+            {
+                name: "Ashymbaeva Toktobubu Abasovna",
+                position: "Deputy Minister of Education and Science of the Kyrgyz Republic",
+                age: "56 years old",
+                date: "10/16/1965"
+            },
+            {
+                name: "Niyazaliev Nuran Sadyrovich",
+                position: "ex-First Deputy Minister of Foreign Affairs of the Kyrgyz Republic",
+                age: "47 years old",
+                date: "1/4/1975"
+            }
+        ];
+
+        function createProfileCards() {
+            const container = document.querySelector('.profiles-container');
+            profiles.forEach(profile => {
+                const card = document.createElement('div');
+                card.className = 'profile-card';
+                card.innerHTML = `
+                    <div class="profile-image"></div>
+                    <div class="profile-info">
+                        <h3>${profile.name}</h3>
+                        <p>${profile.position}</p>
+                        <small>${profile.date} | ${profile.age}</small>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        window.onload = createProfileCards;
+    </script>
+</body>
+</html>
