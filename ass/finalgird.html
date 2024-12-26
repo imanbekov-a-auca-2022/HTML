@@ -44,7 +44,7 @@
         <!-- Box 5 - Footer -->
         <div class="box5">
             <footer>
-                <p>© News agency AKIpress, "Who is Who", 2003-2023</p>
+                <p>© News agency of Mafumafu, "Who is Who", 2003-2023</p>
             </footer>
         </div>
 
@@ -95,36 +95,52 @@
 
         // Профили
         const profiles = [
-            {
-                name: "Ashymbaeva Toktobubu Abasovna",
-                position: "Deputy Minister of Education and Science of the Kyrgyz Republic",
-                age: "56 years old",
-                date: "10/16/1965"
-            },
-            {
-                name: "Niyazaliev Nuran Sadyrovich",
-                position: "ex-First Deputy Minister of Foreign Affairs of the Kyrgyz Republic",
-                age: "47 years old",
-                date: "1/4/1975"
-            }
-        ];
+    {
+        name: "Mafumafu",
+        position: "Mister RollsEater",
+        age: "17 years old",
+        date: "10/16/2027",
+        image: "https://github.com/imanbekov-a-auca-2022/HTML/blob/main/Mafumafu.jpg?raw=true.jpg" 
+    },
+    {
+        name: "Mafumafu",
+        position: "Mister JuiceDrinker",
+        age: "17 years old",
+        date: "1/4/2028",
+        image: "https://github.com/imanbekov-a-auca-2022/HTML/blob/main/Download%20Telegram%20stickers%20for%20free_%20The%20most%20popular%20sticker%20collections%20for%20Telegram.jpg?raw=true.jpg" 
+    },
+    {
+        name: "Mafumafu",
+        position: "Sad CuitePie",
+        age: "17 years old",
+        date: "5/4/2028",
+        image: "https://github.com/imanbekov-a-auca-2022/HTML/blob/main/Very%20Sad%20Mafumafu.jpg?raw=true.jpg" 
+    },
+    {
+        name: "Mafumafu",
+        position: "Happy Huggie",
+        age: "17 years old",
+        date: "1/9/2028",
+        image: "https://github.com/imanbekov-a-auca-2022/HTML/blob/main/Happy%20Mafumafu.jpg?raw=true.jpg" 
+    }
+];
 
         function createProfileCards() {
-            const container = document.querySelector('.profiles-container');
-            profiles.forEach(profile => {
-                const card = document.createElement('div');
-                card.className = 'profile-card';
-                card.innerHTML = `
-                    <div class="profile-image"></div>
-                    <div class="profile-info">
-                        <h3>${profile.name}</h3>
-                        <p>${profile.position}</p>
-                        <small>${profile.date} | ${profile.age}</small>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
+    const container = document.querySelector('.profiles-container');
+    profiles.forEach(profile => {
+        const card = document.createElement('div');
+        card.className = 'profile-card';
+        card.innerHTML = `
+            <div class="profile-image" style="background-image: url('${profile.image}');"></div>
+            <div class="profile-info">
+                <h3>${profile.name}</h3>
+                <p>${profile.position}</p>
+                <small>${profile.date} | ${profile.age}</small>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
 
         window.onload = createProfileCards;
     </script>
