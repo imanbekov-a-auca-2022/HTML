@@ -225,13 +225,3 @@ body {
     cursor: pointer;
 }
 
-/* Horizontal layout */
-.container.horizontal {
-    grid-template-rows: 100px auto auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "one six six seven"
-        "two two three three"
-        "four four five five";
-    height: 100vh;
-}
