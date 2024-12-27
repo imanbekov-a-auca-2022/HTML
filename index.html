@@ -1,7 +1,156 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <meta http-equiv="refresh" content="0;url=ass/grid.html">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6</title>
+    <link rel="stylesheet" href="grid.css" class="style">  
 </head>
 <body>
+    <button onclick='switchStyle()' style='position: absolute; top:0px; right:0px; padding: 10px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer;'>
+      Style
+      </button> 
+
+    <button onclick="toggleTheme()" style="position: absolute; top: 40px; right: 0px; padding: 10px 15px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Theme
+      </button>
+    
+    <div class="container">
+        <!-- Box 1 - Logo -->
+        <div class="box1">
+            <div class="logo">КТО ЕСТЬ КТО</div>
+        </div>
+
+        <!-- Box 2 - Hero with search -->
+        <div class="box2">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+            </div>
+        </div>
+
+        <!-- Box 3 - Organization/People links -->
+        <div class="box3">
+            <div class="section-links">
+                <a href="#">ORGANIZATION</a>
+                <span class="divider">|</span>
+                <a href="#">PEOPLE</a>
+            </div>
+            <div class="stats">24857 people</div>
+        </div>
+
+        <!-- Box 4 - Profiles section -->
+        <div class="box4">
+            <div class="profiles-container"></div>
+        </div>
+
+        <!-- Box 5 - Footer -->
+        <div class="box5">
+            <footer>
+                <p>© News agency of Mafumafu, "Who is Who", 2003-2023</p>
+            </footer>
+        </div>
+
+        <!-- Box 6 - Top right navigation -->
+        <div class="box6">
+            <div class="utility-nav">
+                <a href="#">Rating</a>
+                <a href="#">Join</a>
+                <a href="#" class="menu-btn">MENU</a>
+            </div>
+        </div>
+
+        <!-- Box 7 - Sidebar -->
+        <div class="box7">
+            <div class="sidebar">
+                <h2>KYRGYZSTAN</h2>
+                <nav class="region-nav">
+                    <a href="#">The president</a>
+                    <a href="#">Zhogorku Kenesh</a>
+                    <a href="#">Cabinet of Ministers</a>
+                    <a href="#">Ministries and departments</a>
+                    <a href="#">Judicial system</a>
+                    <a href="#">Healthcare</a>
+                    <a href="#">Strong structure</a>
+                    <a href="#">Bishkek</a>
+                    <a href="#">Osh</a>
+                    <a href="#">Batken region</a>
+                    <a href="#">Jalal-Abad region</a>
+                    <a href="#">Issyk-Kul region</a>
+                    <a href="#">Naryn region</a>
+                    <a href="#">Osh region</a>
+                    <a href="#">Talas region</a>
+                    <a href="#">Chui area</a>
+                    <a href="#">Science and education</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+
+        function switchStyle() {
+            let style = document.querySelector('.style');
+            if (style.getAttribute('href') == 'grid.css') {
+                style.setAttribute('href', 'grid2.css');
+            } else {
+                style.setAttribute('href', 'grid.css');
+            }
+        }
+
+        // Profiles
+        const profiles = [
+    {
+        name: "Mafumafu",
+        position: "Mister RollsEater",
+        age: "17 years old",
+        date: "10/16/2027",
+        image: "https://github.com/imanbekov-a-auca-2022/HTML/blob/main/Mafumafu.jpg?raw=true.jpg" 
+    },
+    {
+        name: "Mafumafu",
+        position: "Mister JuiceDrinker",
+        age: "17 years old",
+        date: "1/4/2028",
+        image: "https://github.com/imanbekov-a-auca-2022/HTML/blob/main/Download%20Telegram%20stickers%20for%20free_%20The%20most%20popular%20sticker%20collections%20for%20Telegram.jpg?raw=true.jpg" 
+    },
+    {
+        name: "Mafumafu",
+        position: "Sad CuitePie",
+        age: "17 years old",
+        date: "5/4/2028",
+        image: "https://github.com/imanbekov-a-auca-2022/HTML/blob/main/Very%20Sad%20Mafumafu.jpg?raw=true.jpg" 
+    },
+    {
+        name: "Mafumafu",
+        position: "Happy Huggie",
+        age: "17 years old",
+        date: "1/9/2028",
+        image: "https://github.com/imanbekov-a-auca-2022/HTML/blob/main/Happy%20Mafumafu.jpg?raw=true.jpg" 
+    }
+];
+
+        function createProfileCards() {
+    const container = document.querySelector('.profiles-container');
+    profiles.forEach(profile => {
+        const card = document.createElement('div');
+        card.className = 'profile-card';
+        card.innerHTML = `
+            <div class="profile-image" style="background-image: url('${profile.image}');"></div>
+            <div class="profile-info">
+                <h3>${profile.name}</h3>
+                <p>${profile.position}</p>
+                <small>${profile.date} | ${profile.age}</small>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+        window.onload = createProfileCards;
+    </script>
 </body>
 </html>
