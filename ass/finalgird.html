@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 6</title>
-    <link rel="stylesheet" href="grid.css">   
+    <link rel="stylesheet" href="grid.css" class="style">  
 </head>
 <body>
-    <div class="controls">
-        <button onclick="toggleTheme()">theme</button>
-        <button onclick="toggleOrientation()">style</button>
-    </div>
+    <button onclick='switchStyle()' style='position: absolute; top:0px; right:0px; padding: 10px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer;'>
+      Style
+      </button> 
+
+    <button onclick="toggleTheme()" style="position: absolute; top: 40px; right: 0px; padding: 10px 15px; background-color: #333; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Theme
+      </button>
     
     <div class="container">
         <!-- Box 1 - Logo -->
@@ -89,11 +92,16 @@
             document.body.classList.toggle('dark-theme');
         }
 
-        function toggleOrientation() {
-            document.querySelector('.container').classList.toggle('horizontal');
+        function switchStyle() {
+            let style = document.querySelector('.style');
+            if (style.getAttribute('href') == 'grid.css') {
+                style.setAttribute('href', 'grid2.css');
+            } else {
+                style.setAttribute('href', 'grid.css');
+            }
         }
 
-        // Профили
+        // Profiles
         const profiles = [
     {
         name: "Mafumafu",
