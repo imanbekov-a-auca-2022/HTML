@@ -32,13 +32,52 @@ body {
     grid-template-rows: 100px auto auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-        "one six six seven"
-        "two two three three"
-        "four four four five";
+        "one six six three"
+        "two two two five"
+        "four four four seven";
     gap: 1px;
     background-color: var(--border-color);
     margin: 0 auto;
     height: 100vh;
+}
+@media (max-width: 500px) {
+    .container {
+        grid-template-columns: 1fr;  /* Stack all columns into a single column */
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four"
+            "five"
+            "six"
+            "seven";  /* Stack all sections vertically */
+        padding: 10px; /* Add some padding around */
+    }
+
+    /* Box adjustments */
+    .box1, .box2, .box3, .box4, .box5, .box6, .box7 {
+        padding: 10px;
+    }
+
+    /* Box 2 (Search section) */
+    .box2 {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Box 4 (Profiles) */
+    .profiles-container {
+        grid-template-columns: 1fr; /* Ensure profiles stack vertically on small screens */
+        gap: 10px;
+    }
+
+    /* Box 6 (Utility navigation) */
+    .box6 {
+        display: flex;
+        justify-content: center; /* Center the utility nav links */
+        flex-direction: column;
+    }
 }
 
 .container > div {
@@ -89,6 +128,7 @@ body {
     grid-area: three;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 0 20px;
 }
@@ -222,4 +262,3 @@ body {
     color: white;
     cursor: pointer;
 }
-
